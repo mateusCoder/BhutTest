@@ -11,15 +11,11 @@ import lombok.NoArgsConstructor;
 @Data
 public class CarFormDto {
 
-    private Long _id;;
-
     private String title;
 
     private String brand;
 
     private String price;
 
-    private String age;
-
-    private Integer __v;
+    private Integer age;
 }
