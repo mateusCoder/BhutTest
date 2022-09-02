@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class CarDto {
 
-    private String _id;;
+    private String _id;
 
     private String title;
 

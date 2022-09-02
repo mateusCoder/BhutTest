@@ -10,4 +10,6 @@ public interface CarService {
     CarDto save(CarFormDto carFormDto);
 
     List<CarDto> listAll();
+
+    Object listBy_id(String id);
 }

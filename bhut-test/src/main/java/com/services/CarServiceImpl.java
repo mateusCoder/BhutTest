@@ -38,4 +38,9 @@ public class CarServiceImpl implements CarService{
     public List<CarDto> listAll() {
         return carClient.listAll();
     }
+
+    @Override
+    public CarDto listBy_id(String id) {
+        return carClient.listOne(id);
+    }
 }
