@@ -1,6 +1,5 @@
 package com.controllers;
 
-import com.documents.Car;
 import com.dtos.CarDto;
 import com.dtos.CarFormDto;
 import com.services.CarServiceImpl;
@@ -12,22 +11,21 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/cars")
+@RequestMapping("/api")
 public class CarController {
 
     private final CarServiceImpl carService;
 
-    private final CarClient carClient;
 
-    @GetMapping
+
+    @GetMapping("/listCars")
     public ResponseEntity<List<CarDto>> listAll(){
-        return ResponseEntity.ok(carClient.listAll());
+        return ResponseEntity.ok(carService.listAll());
     }
 
-    @PostMapping
-    public ResponseEntity<Car> save(@RequestBody CarFormDto carFormDto){
-        return ResponseEntity.ok(carClient.save(carFormDto));
+    @PostMapping("/createCar")
+    public ResponseEntity<CarDto> save(@RequestBody CarFormDto carFormDto){
+
+        return ResponseEntity.ok(carService.save(carFormDto));
     }
-
-
 }

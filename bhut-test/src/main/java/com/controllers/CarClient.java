@@ -1,6 +1,5 @@
 package com.controllers;
 
-import com.documents.Car;
 import com.dtos.CarDto;
 import com.dtos.CarFormDto;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -17,5 +16,5 @@ public interface CarClient {
     List<CarDto> listAll();
 
     @PostMapping
-    Car save(@RequestBody CarFormDto carFormDto);
+    CarDto save(@RequestBody CarFormDto carFormDto);
 }

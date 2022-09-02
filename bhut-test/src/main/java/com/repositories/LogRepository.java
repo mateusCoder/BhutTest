@@ -1,7 +1,7 @@
 package com.repositories;
 
-import com.documents.Car;
+import com.documents.Log;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface CarRepository extends MongoRepository<Car, String> {
+public interface LogRepository extends MongoRepository<Log, Long> {
 }

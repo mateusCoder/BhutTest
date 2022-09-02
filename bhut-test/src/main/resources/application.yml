@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/cars_log
+      uri: mongodb://localhost:27017/bhut_test
 
 server:
   port: 8080

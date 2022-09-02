@@ -1,8 +1,13 @@
 package com.services;
 
+import com.dtos.CarDto;
 import com.dtos.CarFormDto;
 
-import java.net.URI;
+import java.util.List;
 
 public interface CarService {
+
+    CarDto save(CarFormDto carFormDto);
+
+    List<CarDto> listAll();
 }
